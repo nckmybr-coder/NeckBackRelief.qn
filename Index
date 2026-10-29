@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NeckBackRelief</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Prompt', sans-serif;
+      background: #f5f8fc;
+      color: #203346;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 7%;
+    }
+    .brand { font-size: 20px; font-weight: 700; color: #167d83; }
+    .brand span { color: #243e55; }
+    .hero {
+      max-width: 1100px;
+      margin: 35px auto;
+      padding: 40px 24px;
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 35px;
+      align-items: center;
+    }
+    .tag {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 30px;
+      background: #e0f4f1;
+      color: #167d83;
+      font-size: 13px;
+    }
+    h1 {
+      font-size: clamp(36px, 5vw, 58px);
+      line-height: 1.25;
+      margin: 20px 0;
+    }
+    h1 span { color: #16888a; }
+    p { color: #68798b; line-height: 1.9; }
+    .primary {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 14px 25px;
+      border-radius: 12px;
+      background: #167d83;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 8px 22px #167d8330;
+    }
+    .visual {
+      min-height: 330px;
+      border-radius: 30px;
+      background: linear-gradient(145deg, #dff4f0, #e5edf9);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+      text-align: center;
+    }
+    .figure { font-size: 90px; }
+    .visual strong { font-size: 22px; margin-top: 15px; }
+    .features {
+      max-width: 1050px;
+      margin: 0 auto 50px;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .feature {
+      padding: 23px;
+      border-radius: 18px;
+      background: white;
+      border: 1px solid #e8eef4;
+    }
+    .feature b { display: block; margin: 10px 0; }
+    .icon { font-size: 28px; }
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #8b9aaa;
+      font-size: 12px;
+    }
+    @media(max-width: 700px) {
+      .hero { grid-template-columns: 1fr; margin: 10px auto; }
+      .visual { min-height: 230px; }
+      .features { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="brand">Neck<span>BackRelief</span></div>
+    <span>Exercise & Posture</span>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div>
+        <span class="tag">YOUR POSTURE, YOUR PROGRESS</span>
+        <h1>Move Better.<br><span>Feel Better.</span></h1>
+        <p>
+          โปรแกรมฝึกออกกำลังกายเพื่อส่งเสริมท่าทางคอและหลัง
+          พร้อมติดตามความก้าวหน้าในการฝึกอย่างเป็นระบบ
+        </p>
+        <a class="primary" href="profile.html">
+          เริ่มต้นใช้งาน &nbsp; →
+        </a>
+      </div>
+
+      <div class="visual">
+        <div class="figure">🧘</div>
+        <strong>Small Steps, Better Posture</strong>
+        <p>ฝึกอย่างสม่ำเสมอ และติดตามพัฒนาการของคุณ</p>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="feature">
+        <div class="icon">🎯</div>
+        <b>Guided Exercise</b>
+        <p>เรียนรู้วิธีทำท่าออกกำลังกายทีละขั้นตอน</p>
+      </div>
+      <div class="feature">
+        <div class="icon">📷</div>
+        <b>Camera Tracking</b>
+        <p>ใช้กล้องเพื่อเตรียมระบบตรวจจับท่าทาง</p>
+      </div>
+      <div class="feature">
+        <div class="icon">📊</div>
+        <b>Progress Summary</b>
+        <p>ติดตามผลการฝึกและความก้าวหน้ารายสัปดาห์</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>NeckBackRelief · Research Prototype</footer>
+</body>
+</html>
