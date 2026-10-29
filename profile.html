@@ -1,0 +1,413 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ข้อมูลผู้เข้าร่วมวิจัย | NeckBackRelief.qn</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, "Noto Sans Thai", sans-serif;
+      background: #f5f7fb;
+      color: #253047;
+      min-height: 100vh;
+    }
+
+    header {
+      background: white;
+      border-bottom: 1px solid #e5eaf2;
+      padding: 20px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand {
+      font-size: 21px;
+      font-weight: bold;
+      color: #253047;
+    }
+
+    .brand span {
+      color: #5878e8;
+    }
+
+    .step {
+      color: #667085;
+      font-size: 13px;
+    }
+
+    main {
+      max-width: 760px;
+      margin: 42px auto;
+      padding: 0 20px;
+    }
+
+    .intro {
+      margin-bottom: 24px;
+    }
+
+    .intro .tag {
+      color: #5878e8;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 29px;
+      margin-bottom: 10px;
+    }
+
+    .intro p {
+      color: #667085;
+      line-height: 1.8;
+      font-size: 14px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #e6eaf0;
+      border-radius: 18px;
+      padding: 30px;
+      box-shadow: 0 8px 30px rgba(30, 50, 90, 0.05);
+    }
+
+    .section-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 22px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .field {
+      margin-bottom: 20px;
+    }
+
+    .full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .required {
+      color: #e05252;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px 13px;
+      border: 1px solid #d8deea;
+      border-radius: 9px;
+      background: white;
+      color: #253047;
+      font-size: 14px;
+      outline: none;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: #5878e8;
+      box-shadow: 0 0 0 3px rgba(88, 120, 232, 0.12);
+    }
+
+    .hint {
+      color: #858da0;
+      font-size: 12px;
+      line-height: 1.6;
+      margin-top: 7px;
+    }
+
+    .consent {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      background: #f7f8fc;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 4px;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .consent input {
+      width: 17px;
+      height: 17px;
+      margin-top: 4px;
+      flex-shrink: 0;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-block;
+      text-align: center;
+      text-decoration: none;
+      padding: 13px 22px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-back {
+      background: #f0f2f7;
+      color: #4b5568;
+    }
+
+    .btn-next {
+      background: #5878e8;
+      color: white;
+    }
+
+    .btn-next:hover {
+      background: #4263d5;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      color: #8a92a3;
+      font-size: 12px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 17px 20px;
+      }
+
+      main {
+        margin: 28px auto;
+      }
+
+      .card {
+        padding: 22px 17px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .full {
+        grid-column: auto;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      .actions {
+        flex-direction: column-reverse;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="brand">NeckBackRelief<span>.qn</span></div>
+    <div class="step">ขั้นตอนที่ 1 จาก 3</div>
+  </header>
+
+  <main>
+    <div class="intro">
+      <div class="tag">PARTICIPANT REGISTRATION</div>
+      <h1>ข้อมูลผู้เข้าร่วมวิจัย</h1>
+      <p>
+        กรุณากรอกข้อมูลพื้นฐานสำหรับใช้ประกอบการเข้าร่วมโปรแกรม
+        NeckBackRelief เพื่อให้การติดตามผลการออกกำลังกายเป็นไปอย่างเหมาะสม
+      </p>
+    </div>
+
+    <form id="profileForm">
+      <div class="card">
+        <div class="section-title">ข้อมูลพื้นฐาน</div>
+
+        <div class="grid">
+          <div class="field">
+            <label for="participantId">
+              รหัสผู้เข้าร่วมวิจัย <span class="required">*</span>
+            </label>
+            <input
+              type="text"
+              id="participantId"
+              name="participantId"
+              placeholder="เช่น P001"
+              required
+            >
+            <div class="hint">แนะนำให้ใช้รหัสแทนชื่อจริง</div>
+          </div>
+
+          <div class="field">
+            <label for="age">
+              อายุ (ปี) <span class="required">*</span>
+            </label>
+            <input
+              type="number"
+              id="age"
+              name="age"
+              min="18"
+              max="100"
+              placeholder="ระบุอายุ"
+              required
+            >
+          </div>
+
+          <div class="field">
+            <label for="gender">
+              เพศ <span class="required">*</span>
+            </label>
+            <select id="gender" name="gender" required>
+              <option value="">-- เลือกเพศ --</option>
+              <option value="male">ชาย</option>
+              <option value="female">หญิง</option>
+              <option value="other">อื่น ๆ</option>
+              <option value="undisclosed">ไม่ประสงค์ระบุ</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="occupation">อาชีพ</label>
+            <select id="occupation" name="occupation">
+              <option value="">-- เลือกอาชีพ --</option>
+              <option value="student">นักเรียน/นักศึกษา</option>
+              <option value="office">พนักงานสำนักงาน</option>
+              <option value="factory">พนักงานโรงงาน</option>
+              <option value="other">อื่น ๆ</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="height">ส่วนสูง (ซม.)</label>
+            <input
+              type="number"
+              id="height"
+              name="height"
+              min="100"
+              max="250"
+              placeholder="เช่น 165"
+            >
+          </div>
+
+          <div class="field">
+            <label for="weight">น้ำหนัก (กก.)</label>
+            <input
+              type="number"
+              id="weight"
+              name="weight"
+              min="20"
+              max="300"
+              step="0.1"
+              placeholder="เช่น 55.5"
+            >
+          </div>
+
+          <div class="field full">
+            <label for="screenTime">
+              ระยะเวลาใช้คอมพิวเตอร์หรือโทรศัพท์ต่อวัน
+            </label>
+            <select id="screenTime" name="screenTime">
+              <option value="">-- เลือกระยะเวลา --</option>
+              <option value="less2">น้อยกว่า 2 ชั่วโมง</option>
+              <option value="2to4">2–4 ชั่วโมง</option>
+              <option value="4to6">4–6 ชั่วโมง</option>
+              <option value="more6">มากกว่า 6 ชั่วโมง</option>
+            </select>
+          </div>
+
+          <div class="field full">
+            <label for="neckPain">
+              อาการปวดบริเวณคอหรือหลังในปัจจุบัน
+            </label>
+            <select id="neckPain" name="neckPain">
+              <option value="">-- เลือกคำตอบ --</option>
+              <option value="none">ไม่มีอาการ</option>
+              <option value="mild">เล็กน้อย</option>
+              <option value="moderate">ปานกลาง</option>
+              <option value="severe">รุนแรง</option>
+            </select>
+            <div class="hint">
+              คำถามนี้เป็นข้อมูลเบื้องต้น ไม่ใช่การวินิจฉัยทางการแพทย์
+            </div>
+          </div>
+        </div>
+
+        <label class="consent" for="consent">
+          <input type="checkbox" id="consent" name="consent" required>
+          <span>
+            ข้าพเจ้าได้อ่านคำชี้แจงการวิจัยและยินยอมให้ใช้ข้อมูลตามวัตถุประสงค์
+            ที่ได้รับการอนุมัติแล้ว ทั้งนี้ การกดปุ่มนี้ไม่ใช้แทนกระบวนการขอ
+            ความยินยอมอย่างเป็นทางการของโครงการวิจัย
+          </span>
+        </label>
+
+        <div class="actions">
+          <a href="index.html" class="btn btn-back">กลับหน้าแรก</a>
+          <button type="submit" class="btn btn-next">
+            บันทึกและไปต่อ →
+          </button>
+        </div>
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    NeckBackRelief.qn · ระบบสนับสนุนโปรแกรมออกกำลังกาย
+  </footer>
+
+  <script>
+    const form = document.getElementById("profileForm");
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const profile = {
+        participantId: document.getElementById("participantId").value.trim(),
+        age: document.getElementById("age").value,
+        gender: document.getElementById("gender").value,
+        occupation: document.getElementById("occupation").value,
+        height: document.getElementById("height").value,
+        weight: document.getElementById("weight").value,
+        screenTime: document.getElementById("screenTime").value,
+        neckPain: document.getElementById("neckPain").value,
+        consent: document.getElementById("consent").checked
+      };
+
+      // ขั้นนี้เก็บข้อมูลไว้ในเบราว์เซอร์ชั่วคราวเท่านั้น
+      // ยังไม่ได้ส่งข้อมูลไป Google Sheets หรือ Apps Script
+      sessionStorage.setItem("neckBackReliefProfile", JSON.stringify(profile));
+
+      // ไปยังหน้าถัดไป (ต้องสร้าง exercise.html ก่อน)
+      window.location.href = "exercise.html";
+    });
+  </script>
+</body>
+</html>
