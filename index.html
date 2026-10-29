@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>NeckBackRelief | Exercise & Progress</title>
+<title>NeckBackRelief | Feel Better, Move Brighter</title>
 <script src="https://cdn.jsdelivr.net/npm/@mediapipe/pose@0.5.1675469404/pose.js" crossorigin="anonymous"></script>
 <style>
 :root{--primary:#347f8c;--primary-dark:#286b77;--dark:#172b36;--muted:#617580;--bg:#eaf6fa;--line:#d8e6eb;--danger:#c0392b;--ok:#18794e;--pale:#dff0f5}
@@ -50,6 +50,32 @@ table{border-collapse:collapse;width:100%;font-size:12px}th,td{padding:8px;borde
 .progress{height:8px;border-radius:10px;background:#d6e2e6;overflow:hidden;margin:10px 0}.progress span{display:block;height:100%;width:10%;background:var(--primary);border-radius:10px}
 .segment{display:flex;gap:8px}.segment .btn{flex:1;font-size:12px;padding:12px 6px}.segment .btn.selected{outline:2px solid var(--primary);background:#e1f2f6;color:#245965}
 @media(max-width:380px){.grid{grid-template-columns:1fr}.full{grid-column:auto}.video{height:260px}}
+
+/* Colorful wellness theme */
+:root{--primary:#397fdf;--primary-dark:#2458a8;--dark:#20304a;--muted:#6d7b92;--bg:#f4f5ff;--line:#e4e8f5;--danger:#ef5b73;--ok:#16865d;--pale:#e9f4ff;--purple:#8064df;--pink:#ff8fba;--yellow:#ffd166;--mint:#73dbc2}
+body{background:radial-gradient(circle at 8% 8%,#e8e7ff 0,transparent 28%),radial-gradient(circle at 95% 45%,#dff8f2 0,transparent 25%),#f3f6ff;color:var(--dark)}
+.app{background:#fbfcff;box-shadow:0 0 45px #293e7015}
+header{background:rgba(255,255,255,.92);border-bottom:1px solid #e9eafa;position:sticky;top:0;z-index:9;backdrop-filter:blur(12px)}
+.brand{display:flex;align-items:center;gap:8px;font-size:18px}.brand:before{content:'✦';display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:12px;color:white;background:linear-gradient(135deg,#6c73e8,#48b8d7);box-shadow:0 5px 12px #6c73e83b}
+.brand span{color:#8269e9}.small{background:#f1efff;border-radius:20px;padding:6px 9px;color:#6d5cc2}
+.page{padding:22px 18px 30px}h1{letter-spacing:-.7px}h2{letter-spacing:-.4px}
+.btn{background:linear-gradient(115deg,#5579ee,#4b9ee8);border-radius:13px;box-shadow:0 7px 16px #5579ee30;transition:transform .18s,box-shadow .18s}.btn:active{transform:scale(.985)}.btn.secondary{background:white;color:#4a69c8;border:1px solid #dfe4fb;box-shadow:none}.btn.danger{background:linear-gradient(120deg,#f05c83,#ec7970)}
+.card,.stat,.exercise-choice{border:1px solid #e6e9f8;box-shadow:0 7px 20px #3147760a;border-radius:16px}.card{padding:17px}.note{background:#fff7df;color:#84601b;border-color:#ffebad;border-radius:13px}
+.hero{background:linear-gradient(145deg,#626ee8 0%,#7e68df 42%,#45b8cb 100%);border-radius:25px;min-height:390px;padding:24px 19px;box-shadow:0 16px 30px #656ee933;text-align:left;align-items:flex-start}
+.hero:before{width:240px;height:240px;right:-80px;top:-45px;background:#ffffff16}.hero:after{content:' ';position:absolute;width:180px;height:180px;border-radius:50%;right:-42px;bottom:-74px;border:25px solid #ffffff16}
+.hero .mark{font-size:0;width:106px;height:106px;border-radius:32px;background:#ffffff20;border:1px solid #ffffff45;display:flex;align-items:center;justify-content:center;margin-bottom:20px;backdrop-filter:blur(6px)}
+.hero .mark:before{content:'🧘';font-size:57px;filter:drop-shadow(0 5px 5px #213d6030)}
+.hero h1{font-size:31px;color:white;margin-bottom:10px}.hero p{color:#f3f5ff;font-size:14px;max-width:255px}.hero .btn{margin-top:15px;background:white;color:#565fd0;box-shadow:0 7px 18px #2c37752b;width:auto;min-width:180px}
+.home-features{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-top:18px}.feature-tile{border-radius:17px;padding:14px 12px;background:white;border:1px solid #e7eafa;box-shadow:0 7px 20px #31477608}.feature-icon{width:44px;height:44px;border-radius:15px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:10px}.feature-tile strong{display:block;font-size:13px}.feature-tile small{display:block;color:var(--muted);font-size:11px;line-height:1.4;margin-top:4px}.lavender{background:#efedff}.mint-bg{background:#e2faf3}.peach{background:#fff0e6}.blue-bg{background:#e5f2ff}
+.form-title h2{font-size:26px}.form-title:before{content:'👋';display:block;font-size:42px;margin-bottom:10px}
+label{color:#354563}input,select,textarea{border-color:#dce2f3;border-radius:11px;background:#fff}input:focus,select:focus,textarea:focus{outline:3px solid #e7eaff;border-color:#8d8bee}
+.exercise-choice{padding:13px;background:linear-gradient(120deg,#fff,#fbfbff)}.exercise-choice:has(input:checked){border-color:#8586ef;background:#f5f4ff;box-shadow:0 0 0 2px #8586ef20}.exercise-choice label strong{display:block;margin-bottom:4px;color:#324675}.exercise-choice label:before{content:'🏋️ ';font-size:18px}
+.exercise-choice:nth-child(2) label:before{content:'🙆 '}.exercise-choice:nth-child(3) label:before{content:'🧍 '}.exercise-choice:nth-child(4) label:before{content:'🤸 '}
+.stats{gap:7px}.stat{background:linear-gradient(160deg,#fff,#f7f8ff);padding:12px 3px}.stat:nth-child(1){border-top:3px solid #6b78ed}.stat:nth-child(2){border-top:3px solid #50c6ac}.stat:nth-child(3){border-top:3px solid #ffb45f}.stat b{color:#344c86}.status{border-radius:12px}
+.day-grid{gap:6px}.day{border-radius:12px;background:#eef0fa;color:#62708a}.day.done{background:linear-gradient(135deg,#48bda8,#39a9bd);color:white}.day.current{background:#efedff;border:2px solid #8475e9;color:#5b4fc2}.progress{height:10px;background:#e9eaf8}.progress span{background:linear-gradient(90deg,#7d69e7,#43c3bd)}
+.bottom-nav{background:rgba(255,255,255,.96);border-top:1px solid #e7eafa;box-shadow:0 -8px 22px #253b7008;backdrop-filter:blur(12px)}.bottom-nav button{min-width:70px}.bottom-nav button b{display:flex;width:29px;height:27px;align-items:center;justify-content:center;font-size:20px}.bottom-nav button.active{color:#625fd1}.bottom-nav button.active b{background:#efedff;border-radius:10px}
+@media(max-width:380px){.hero{min-height:360px}.hero h1{font-size:27px}}
+
 </style>
 </head>
 <body>
@@ -58,13 +84,19 @@ table{border-collapse:collapse;width:100%;font-size:12px}th,td{padding:8px;borde
 
 <section id="page-home" class="page active">
   <div class="hero">
-    <div class="mark">✳</div>
+    <div class="mark" aria-label="Friendly wellness character"><svg width="94" height="94" viewBox="0 0 100 100" role="img" aria-label="Cartoon person stretching"><circle cx="50" cy="50" r="43" fill="#ffffff" opacity=".18"/><circle cx="50" cy="25" r="12" fill="#ffd6b5"/><path d="M38 23 Q40 8 53 13 Q64 15 62 27 Q54 18 38 23" fill="#39436f"/><path d="M43 39 Q50 34 57 39 L63 58 L56 63 L53 49 L49 49 L44 64 L36 60 Z" fill="#ffcf70"/><path d="M43 42 L26 51 L17 41 M57 42 L72 32 L82 38" fill="none" stroke="#ffd6b5" stroke-width="7" stroke-linecap="round"/><path d="M42 62 L32 78 L21 80 M56 62 L68 75 L79 73" fill="none" stroke="#b9f3e4" stroke-width="8" stroke-linecap="round"/><path d="M17 41 L12 35 M82 38 L87 31" stroke="#fff" stroke-width="3" stroke-linecap="round"/><circle cx="76" cy="15" r="4" fill="#ffe18a"/><path d="M18 20 l3 -5 l3 5 l5 3 l-5 3 l-3 5 l-3 -5 l-5 -3z" fill="#fff" opacity=".9"/></svg></div>
     <h1>NeckBackRelief</h1>
     <p><strong>Revitalize Your Neck, Shoulders &amp; Upper Back</strong></p>
     <p>Start Your Pain-Free Journey Today!</p>
     <button class="btn secondary" onclick="showPage('page-login')">Get Started</button>
   </div>
-  <p style="text-align:center;margin-top:18px">A guided exercise and progress-tracking experience.</p>
+  <div class="home-features">
+    <div class="feature-tile"><div class="feature-icon lavender">🧘</div><strong>Move with Ease</strong><small>Gentle neck and shoulder exercises</small></div>
+    <div class="feature-tile"><div class="feature-icon mint-bg">📈</div><strong>Track Progress</strong><small>Follow your training journey</small></div>
+    <div class="feature-tile"><div class="feature-icon peach">🎯</div><strong>Posture Feedback</strong><small>Live visual guidance while exercising</small></div>
+    <div class="feature-tile"><div class="feature-icon blue-bg">🌟</div><strong>Build a Habit</strong><small>Small steps, steady progress</small></div>
+  </div>
+  <p style="text-align:center;margin-top:18px">A brighter way to care for your neck, shoulders and upper back.</p>
 </section>
 
 <section id="page-login" class="page">
@@ -79,7 +111,7 @@ table{border-collapse:collapse;width:100%;font-size:12px}th,td{padding:8px;borde
 </section>
 
 <section id="page-profile" class="page">
-  <h2>Personalize Your Plan</h2>
+  <h2>✨ Personalize Your Plan</h2>
   <p>Set up your participant profile to personalize your training plan.</p>
   <label for="userId">Participant ID *</label><input id="userId" required placeholder="e.g. P001">
   <label for="participantName">Display Name (optional)</label><input id="participantName" placeholder="Use a study ID if preferred">
@@ -97,7 +129,7 @@ table{border-collapse:collapse;width:100%;font-size:12px}th,td{padding:8px;borde
 </section>
 
 <section id="page-plan" class="page">
-  <h2>30-Day Resistance Band Challenge</h2>
+  <h2>🌈 30-Day Resistance Band Challenge</h2>
   <div class="muted">5-week guided exercise program</div>
   <div class="progress"><span id="program-progress"></span></div>
   <div id="program-progress-label" class="muted">Your progress will appear here</div>
@@ -120,7 +152,7 @@ table{border-collapse:collapse;width:100%;font-size:12px}th,td{padding:8px;borde
 </section>
 
 <section id="page-exercise" class="page">
-  <h3 id="exercise-title">Exercise</h3>
+  <h3 id="exercise-title">💪 Exercise</h3>
   <p id="exercise-instruction"></p>
   <div class="video"><video id="webcam" playsinline muted autoplay></video><canvas id="output_canvas"></canvas></div>
   <div class="stats">
@@ -134,7 +166,7 @@ table{border-collapse:collapse;width:100%;font-size:12px}th,td{padding:8px;borde
 </section>
 
 <section id="page-summary" class="page">
-  <h2>Workout Complete!</h2>
+  <h2>🎉 Workout Complete!</h2>
   <div class="card">
     <p>Exercise: <strong id="sum-exercise"></strong></p>
     <p>Exercise Time: <strong id="sum-duration"></strong></p>
@@ -149,23 +181,23 @@ table{border-collapse:collapse;width:100%;font-size:12px}th,td{padding:8px;borde
 </section>
 
 <section id="page-history" class="page">
-  <h2>Workout History</h2>
+  <h2>📊 Workout History</h2>
   <p>Training records linked to the participant ID on this device.</p>
   <button class="btn" onclick="openHistory()">REFRESH HISTORY</button>
-  <div id="history-status" class="status">กำลังเตรียมข้อมูล...</div>
+  <div id="history-status" class="status">Preparing data...</div>
   <div id="history-table" class="scroll"></div>
   <button class="btn secondary" onclick="showPage('page-home')">HOME</button>
 </section>
 
 <section id="page-cva" class="page">
-  <h2>Record CVA Measurement</h2>
+  <h2>📐 Record CVA Measurement</h2>
   <p>Measure the Craniovertebral Angle (CVA) using the same approved method and camera position each time.</p>
-  <label for="cvaValue">CVA (degrees) *</label><input id="cvaValue" type="number" min="0" max="180" step="0.1" placeholder="เช่น  บันทึกค่าที่วัดได้">
+  <label for="cvaValue">CVA (degrees) *</label><input id="cvaValue" type="number" min="0" max="180" step="0.1" placeholder="Enter measured angle">
   <div class="grid">
     <div><label for="cvaWeek">Measurement Timepoint</label><select id="cvaWeek"><option value="0">Baseline</option><option value="1">Week 1</option><option value="2">Week 2</option><option value="3">Week 3</option><option value="4">Week 4</option><option value="5">Post-program (Week 5)</option></select></div>
     <div><label for="cvaMethod">Measurement Method</label><select id="cvaMethod"><option value="manual">Manual measurement</option><option value="image-analysis">Image analysis (protocol-based)</option></select></div>
   </div>
-  <label for="cvaNotes">Notes</label><textarea id="cvaNotes" rows="2" placeholder="ตำแหน่งกล้อง/หมายเหตุที่จำเป็น"></textarea>
+  <label for="cvaNotes">Notes</label><textarea id="cvaNotes" rows="2" placeholder="Camera position or relevant notes"></textarea>
   <button class="btn" onclick="saveCVA()">SAVE CVA</button>
   <div id="cva-status" class="status" hidden></div>
   <button class="btn secondary" onclick="showPage('page-home')">HOME</button>
