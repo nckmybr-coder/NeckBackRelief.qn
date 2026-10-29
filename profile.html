@@ -9,31 +9,27 @@
   <style>
     * {
       box-sizing: border-box;
-      margin: 0;
-      padding: 0;
     }
 
     body {
-      font-family: Arial, "Noto Sans Thai", sans-serif;
+      margin: 0;
+      font-family: Arial, sans-serif;
       background: #f5f7fb;
       color: #253047;
-      min-height: 100vh;
     }
 
     header {
       background: white;
-      border-bottom: 1px solid #e5eaf2;
       padding: 20px 7%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 12px;
+      border-bottom: 1px solid #e5eaf2;
     }
 
     .brand {
       font-size: 21px;
       font-weight: bold;
-      color: #253047;
     }
 
     .brand span {
@@ -41,21 +37,21 @@
     }
 
     .step {
-      color: #667085;
       font-size: 13px;
+      color: #667085;
     }
 
     main {
       max-width: 760px;
-      margin: 42px auto;
-      padding: 0 20px;
+      margin: 40px auto;
+      padding: 0 18px;
     }
 
     .intro {
       margin-bottom: 24px;
     }
 
-    .intro .tag {
+    .tag {
       color: #5878e8;
       font-size: 13px;
       font-weight: bold;
@@ -63,8 +59,8 @@
     }
 
     h1 {
-      font-size: 29px;
-      margin-bottom: 10px;
+      font-size: 28px;
+      margin: 0 0 12px;
     }
 
     .intro p {
@@ -76,8 +72,8 @@
     .card {
       background: white;
       border: 1px solid #e6eaf0;
-      border-radius: 18px;
-      padding: 30px;
+      border-radius: 16px;
+      padding: 28px;
       box-shadow: 0 8px 30px rgba(30, 50, 90, 0.05);
     }
 
@@ -90,11 +86,11 @@
     .grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 20px;
+      gap: 18px;
     }
 
     .field {
-      margin-bottom: 20px;
+      margin-bottom: 4px;
     }
 
     .full {
@@ -104,7 +100,7 @@
     label {
       display: block;
       font-size: 14px;
-      font-weight: 600;
+      font-weight: bold;
       margin-bottom: 8px;
     }
 
@@ -112,38 +108,39 @@
       color: #e05252;
     }
 
-    input, select, textarea {
+    input,
+    select {
       width: 100%;
-      padding: 12px 13px;
+      padding: 12px;
       border: 1px solid #d8deea;
       border-radius: 9px;
-      background: white;
-      color: #253047;
       font-size: 14px;
-      outline: none;
+      background: white;
     }
 
-    input:focus, select:focus, textarea:focus {
+    input:focus,
+    select:focus {
+      outline: 2px solid #dce4ff;
       border-color: #5878e8;
-      box-shadow: 0 0 0 3px rgba(88, 120, 232, 0.12);
     }
 
     .hint {
       color: #858da0;
       font-size: 12px;
+      margin-top: 6px;
       line-height: 1.6;
-      margin-top: 7px;
     }
 
     .consent {
       display: flex;
-      align-items: flex-start;
       gap: 10px;
-      background: #f7f8fc;
+      align-items: flex-start;
+      margin-top: 24px;
       padding: 15px;
+      background: #f7f8fc;
       border-radius: 10px;
-      margin-top: 4px;
       font-size: 13px;
+      font-weight: normal;
       line-height: 1.8;
     }
 
@@ -158,33 +155,54 @@
       display: flex;
       justify-content: space-between;
       gap: 12px;
-      margin-top: 28px;
+      margin-top: 26px;
     }
 
     .btn {
       display: inline-block;
-      text-align: center;
-      text-decoration: none;
-      padding: 13px 22px;
-      border-radius: 10px;
+      padding: 13px 20px;
+      border: none;
+      border-radius: 9px;
       font-size: 14px;
       font-weight: bold;
+      text-align: center;
+      text-decoration: none;
       cursor: pointer;
-      border: none;
     }
 
     .btn-back {
-      background: #f0f2f7;
       color: #4b5568;
+      background: #f0f2f7;
     }
 
     .btn-next {
-      background: #5878e8;
       color: white;
+      background: #5878e8;
     }
 
     .btn-next:hover {
       background: #4263d5;
+    }
+
+    #message {
+      display: none;
+      margin-top: 20px;
+      padding: 16px;
+      border-radius: 10px;
+      line-height: 1.8;
+      font-size: 14px;
+    }
+
+    #message.success {
+      display: block;
+      background: #e9f8ef;
+      color: #17683a;
+    }
+
+    #message.error {
+      display: block;
+      background: #fff0f0;
+      color: #b42318;
     }
 
     footer {
@@ -200,7 +218,7 @@
       }
 
       main {
-        margin: 28px auto;
+        margin: 26px auto;
       }
 
       .card {
@@ -209,7 +227,6 @@
 
       .grid {
         grid-template-columns: 1fr;
-        gap: 0;
       }
 
       .full {
@@ -234,7 +251,7 @@
 <body>
   <header>
     <div class="brand">NeckBackRelief<span>.qn</span></div>
-    <div class="step">ขั้นตอนที่ 1 จาก 3</div>
+    <div class="step">ขั้นตอนที่ 1</div>
   </header>
 
   <main>
@@ -242,16 +259,17 @@
       <div class="tag">PARTICIPANT REGISTRATION</div>
       <h1>ข้อมูลผู้เข้าร่วมวิจัย</h1>
       <p>
-        กรุณากรอกข้อมูลพื้นฐานสำหรับใช้ประกอบการเข้าร่วมโปรแกรม
-        NeckBackRelief เพื่อให้การติดตามผลการออกกำลังกายเป็นไปอย่างเหมาะสม
+        กรุณากรอกข้อมูลพื้นฐานให้ครบถ้วน
+        เพื่อใช้ประกอบการเข้าร่วมโปรแกรม NeckBackRelief
       </p>
     </div>
 
-    <form id="profileForm">
-      <div class="card">
-        <div class="section-title">ข้อมูลพื้นฐาน</div>
+    <div class="card">
+      <div class="section-title">ข้อมูลส่วนตัว</div>
 
+      <form id="profileForm">
         <div class="grid">
+
           <div class="field">
             <label for="participantId">
               รหัสผู้เข้าร่วมวิจัย <span class="required">*</span>
@@ -263,7 +281,7 @@
               placeholder="เช่น P001"
               required
             >
-            <div class="hint">แนะนำให้ใช้รหัสแทนชื่อจริง</div>
+            <div class="hint">ควรใช้รหัสแทนชื่อจริง</div>
           </div>
 
           <div class="field">
@@ -313,6 +331,7 @@
               name="height"
               min="100"
               max="250"
+              step="0.1"
               placeholder="เช่น 165"
             >
           </div>
@@ -332,7 +351,7 @@
 
           <div class="field full">
             <label for="screenTime">
-              ระยะเวลาใช้คอมพิวเตอร์หรือโทรศัพท์ต่อวัน
+              เวลาใช้คอมพิวเตอร์หรือโทรศัพท์ต่อวัน
             </label>
             <select id="screenTime" name="screenTime">
               <option value="">-- เลือกระยะเวลา --</option>
@@ -344,9 +363,7 @@
           </div>
 
           <div class="field full">
-            <label for="neckPain">
-              อาการปวดบริเวณคอหรือหลังในปัจจุบัน
-            </label>
+            <label for="neckPain">อาการปวดคอหรือหลังในปัจจุบัน</label>
             <select id="neckPain" name="neckPain">
               <option value="">-- เลือกคำตอบ --</option>
               <option value="none">ไม่มีอาการ</option>
@@ -354,29 +371,32 @@
               <option value="moderate">ปานกลาง</option>
               <option value="severe">รุนแรง</option>
             </select>
-            <div class="hint">
-              คำถามนี้เป็นข้อมูลเบื้องต้น ไม่ใช่การวินิจฉัยทางการแพทย์
-            </div>
           </div>
         </div>
 
         <label class="consent" for="consent">
-          <input type="checkbox" id="consent" name="consent" required>
+          <input
+            type="checkbox"
+            id="consent"
+            name="consent"
+            required
+          >
           <span>
-            ข้าพเจ้าได้อ่านคำชี้แจงการวิจัยและยินยอมให้ใช้ข้อมูลตามวัตถุประสงค์
-            ที่ได้รับการอนุมัติแล้ว ทั้งนี้ การกดปุ่มนี้ไม่ใช้แทนกระบวนการขอ
-            ความยินยอมอย่างเป็นทางการของโครงการวิจัย
+            ข้าพเจ้าได้รับคำชี้แจงเกี่ยวกับการวิจัยและยินยอมให้ใช้ข้อมูล
+            ตามเอกสารและกระบวนการขอความยินยอมที่ได้รับอนุมัติ
           </span>
         </label>
+
+        <div id="message" role="status" aria-live="polite"></div>
 
         <div class="actions">
           <a href="index.html" class="btn btn-back">กลับหน้าแรก</a>
           <button type="submit" class="btn btn-next">
-            บันทึกและไปต่อ →
+            บันทึกข้อมูล →
           </button>
         </div>
-      </div>
-    </form>
+      </form>
+    </div>
   </main>
 
   <footer>
@@ -385,28 +405,61 @@
 
   <script>
     const form = document.getElementById("profileForm");
+    const message = document.getElementById("message");
 
     form.addEventListener("submit", function(event) {
       event.preventDefault();
 
+      message.className = "";
+      message.style.display = "none";
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
       const profile = {
         participantId: document.getElementById("participantId").value.trim(),
-        age: document.getElementById("age").value,
+        age: Number(document.getElementById("age").value),
         gender: document.getElementById("gender").value,
         occupation: document.getElementById("occupation").value,
         height: document.getElementById("height").value,
         weight: document.getElementById("weight").value,
         screenTime: document.getElementById("screenTime").value,
         neckPain: document.getElementById("neckPain").value,
-        consent: document.getElementById("consent").checked
+        consent: document.getElementById("consent").checked,
+        savedAt: new Date().toISOString()
       };
 
-      // ขั้นนี้เก็บข้อมูลไว้ในเบราว์เซอร์ชั่วคราวเท่านั้น
-      // ยังไม่ได้ส่งข้อมูลไป Google Sheets หรือ Apps Script
-      sessionStorage.setItem("neckBackReliefProfile", JSON.stringify(profile));
+      if (!profile.participantId) {
+        message.textContent = "กรุณากรอกรหัสผู้เข้าร่วมวิจัย";
+        message.className = "error";
+        return;
+      }
 
-      // ไปยังหน้าถัดไป (ต้องสร้าง exercise.html ก่อน)
-      window.location.href = "exercise.html";
+      try {
+        sessionStorage.setItem(
+          "neckBackReliefProfile",
+          JSON.stringify(profile)
+        );
+
+        message.textContent =
+          "บันทึกข้อมูลชั่วคราวในเบราว์เซอร์เรียบร้อยแล้ว " +
+          "ขั้นตอนถัดไปจะเปิดใช้งานเมื่อสร้างหน้าถัดไปเสร็จ";
+
+        message.className = "success";
+        message.scrollIntoView({
+          behavior: "smooth",
+          block: "center"
+        });
+
+      } catch (error) {
+        message.textContent =
+          "ไม่สามารถบันทึกข้อมูลในเบราว์เซอร์ได้ กรุณาลองใหม่อีกครั้ง";
+
+        message.className = "error";
+        console.error("Profile save error:", error);
+      }
     });
   </script>
 </body>
